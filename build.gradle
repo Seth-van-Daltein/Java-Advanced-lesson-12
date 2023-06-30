@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'war'
+}
+
+group = 'lesson12-maven'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'javax.servlet:javax.servlet-api:4.0.1'
+    testImplementation 'javax.servlet:jstl:1.2'
+}
+
+test {
+    useJUnitPlatform()
+}
